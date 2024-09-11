@@ -4,18 +4,32 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
-dependencies:
-  docx-templates:
-    specifier: ^4.13.0
-    version: 4.13.0
-  isomorphic-fetch:
-    specifier: ^3.0.0
-    version: 3.0.0
-  yaqrcode:
-    specifier: ^0.2.1
-    version: 0.2.1
+importers:
+
+  .:
+    dependencies:
+      docx-templates:
+        specifier: ^4.13.0
+        version: 4.13.0
+      easy-template-x-extension-html:
+        specifier: ^0.0.4
+        version: 0.0.4
+      isomorphic-fetch:
+        specifier: ^3.0.0
+        version: 3.0.0
+      yaqrcode:
+        specifier: ^0.2.1
+        version: 0.2.1
 
 packages:
+
+  '@xmldom/xmldom@0.8.7':
+    resolution: {integrity: sha512-sI1Ly2cODlWStkINzqGrZ8K6n+MTSbAeQnAipGyL+KZCXuHaRlj2gyyy8B/9MvsFFqN7XHryQnB2QwhzvJXovg==}
+    engines: {node: '>=10.0.0'}
+
+  '@xmldom/xmldom@0.8.7':
+    resolution: {integrity: sha512-sI1Ly2cODlWStkINzqGrZ8K6n+MTSbAeQnAipGyL+KZCXuHaRlj2gyyy8B/9MvsFFqN7XHryQnB2QwhzvJXovg==}
+    engines: {node: '>=10.0.0'}
 
   /core-util-is@1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
@@ -29,7 +43,13 @@ packages:
       sax: 1.3.0
     dev: false
 
-  /immediate@3.0.6:
+  easy-template-x-extension-html@0.0.4:
+    resolution: {integrity: sha512-qGCBgpOjux+NBjsFjs70Q5Qde96spApEtugQeFmIqQF2WJAP9MbhCNukjqzeZmpx3I3C3bXW+r1UuISuTHbHkQ==}
+
+  easy-template-x@3.2.1:
+    resolution: {integrity: sha512-uB1R9qYB57HXDpzSS0FKwdgKZIs4iTqHcieSteDSKtz6R+mbaxhxsFdR7YhwvHR+u3VCxC2EpTKEnQh/DNdCfQ==}
+
+  immediate@3.0.6:
     resolution: {integrity: sha512-XXOFtyqDjNDAQxVfYxuF7g9Il/IbWmmlQg2MYKOH8ExIT1qg6xc4zyS3HaEEATgs1btfzxq15ciUiY7gjSXRGQ==}
     dev: false
 
@@ -65,7 +85,10 @@ packages:
       immediate: 3.0.6
     dev: false
 
-  /node-fetch@2.7.0:
+  lodash.get@4.4.2:
+    resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+
+  node-fetch@2.7.0:
     resolution: {integrity: sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==}
     engines: {node: 4.x || >=6.0.0}
     peerDependencies:
@@ -87,6 +110,93 @@ packages:
 
   /readable-stream@2.3.8:
     resolution: {integrity: sha512-8p0AUk4XODgIewSi0l8Epjs+EVnWiK7NoDIEGU0HhE7+ZyY8D1IMY7odu5lRrFXGg71L15KG8QrPmum45RTtdA==}
+
+  safe-buffer@5.1.2:
+    resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
+
+  sax@1.3.0:
+    resolution: {integrity: sha512-0s+oAmw9zLl1V1cS9BtZN7JAd0cW5e0QH4W3LWEK6a4LaLEA2OTpGYWDY+6XasBLtz6wkm3u1xRw95mRuJ59WA==}
+
+  setimmediate@1.0.5:
+    resolution: {integrity: sha512-MATJdZp8sLqDl/68LfQmbP8zKPLQNV6BIZoIgrscFDQ+RsvK/BxeDQOgyxKKoh0y/8h3BqVFnCqQ/gd+reiIXA==}
+
+  string_decoder@1.1.1:
+    resolution: {integrity: sha512-n/ShnvDi6FHbbVfviro+WojiFzv+s8MPMHBczVePfUpDJLwoLT0ht1l4YwBCbi8pJAveEEdnkHyPyTP/mzRfwg==}
+
+  tr46@0.0.3:
+    resolution: {integrity: sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==}
+
+  util-deprecate@1.0.2:
+    resolution: {integrity: sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==}
+
+  webidl-conversions@3.0.1:
+    resolution: {integrity: sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==}
+
+  whatwg-fetch@3.6.20:
+    resolution: {integrity: sha512-EqhiFU6daOA8kpjOWTL0olhVOF3i7OrFzSYiGsEMB8GcXS+RrzauAERX65xMeNWVqxA6HXH2m69Z9LaKKdisfg==}
+
+  whatwg-url@5.0.0:
+    resolution: {integrity: sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==}
+
+  yaqrcode@0.2.1:
+    resolution: {integrity: sha512-J7VoOePCNP//W6ImhDAOPxZO55u7xgt0s7dJkhlKTzbRAZX9MNljOsBOR4Xghoh9BsXww6tKZNW9VZuSnUSicA==}
+
+snapshots:
+
+  '@xmldom/xmldom@0.8.7': {}
+
+  core-util-is@1.0.3: {}
+
+  docx-templates@4.13.0:
+    dependencies:
+      jszip: 3.10.1
+      sax: 1.3.0
+
+  easy-template-x-extension-html@0.0.4:
+    dependencies:
+      easy-template-x: 3.2.1
+
+  easy-template-x@3.2.1:
+    dependencies:
+      '@xmldom/xmldom': 0.8.7
+      jszip: 3.10.1
+      lodash.get: 4.4.2
+
+  immediate@3.0.6: {}
+
+  inherits@2.0.4: {}
+
+  isarray@1.0.0: {}
+
+  isomorphic-fetch@3.0.0:
+    dependencies:
+      node-fetch: 2.7.0
+      whatwg-fetch: 3.6.20
+    transitivePeerDependencies:
+      - encoding
+
+  jszip@3.10.1:
+    dependencies:
+      lie: 3.3.0
+      pako: 1.0.11
+      readable-stream: 2.3.8
+      setimmediate: 1.0.5
+
+  lie@3.3.0:
+    dependencies:
+      immediate: 3.0.6
+
+  lodash.get@4.4.2: {}
+
+  node-fetch@2.7.0:
+    dependencies:
+      whatwg-url: 5.0.0
+
+  pako@1.0.11: {}
+
+  process-nextick-args@2.0.1: {}
+
+  readable-stream@2.3.8:
     dependencies:
       core-util-is: 1.0.3
       inherits: 2.0.4
